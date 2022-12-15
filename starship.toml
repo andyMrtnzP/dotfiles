@@ -19,24 +19,29 @@ format = "[$path]($style)"
 [git_branch]
 symbol = "  "
 style = "bold #ffe100 inverted"
-format = " on [$symbol$branch($remote_name)] ($style)"
+format = " on [$symbol$branch ($remote_name)]($style)"
 
 [git_status]
 conflicted = "\\[W/CONFLICTS\\] "
-modified = "\\[modified\\] "
+deleted = "\\[deleted 🗑\\] "
+modified = "\\[w/changes\\] "
+ahead = "\\[ahead by ${count} commits\\] "
+behind = "\\[behind by ${count} commits\\] "
+diverged = "\\[diverged ⇡${ahead_count}⇣${behind_count}\\] "
+up_to_date = "\\[to date ✓\\] "
 stashed = "\\[stashed 📦\\] "
+staged = "\\[w/changes\\] "
 
 style = "bold #ffe100 inverted"
-format = "[$conflicted$stashed$deleted$modified]($style)"
+format = "[$conflicted$stashed$deleted$modified$staged]($style)"
 
 ["battery"]
 disabled = false
 
 [nodejs]
 version_format = "v${major}.${minor}"
-format = " on [Nde $version](bold green)"
+format = " on [Node $version](bold green)"
 
 [package]
-style = "bold #fffff"
 version_format = " v${major}.${minor}"
 format = "[$version]($style)"
