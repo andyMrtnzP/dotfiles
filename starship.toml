@@ -19,7 +19,7 @@ format = "[$path]($style)"
 [git_branch]
 symbol = "  "
 style = "bold #ffe100 inverted"
-format = " on [$symbol$branch($remote_name)]($style)"
+format = " on [$symbol$branch($remote_name)] ($style)"
 
 [git_status]
 conflicted = "\\[W/CONFLICTS\\] "
