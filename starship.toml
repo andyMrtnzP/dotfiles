@@ -1,0 +1,42 @@
+format = "$directory$git_branch$git_status$package$nodejs\n$character"
+command_timeout = 500
+add_newline = true
+
+[character]
+success_symbol = "[>](bold green) "
+error_symbol = "[>](bold red) "
+
+[cmd_duration]
+min_time = 500
+format = " (took [$duration](bold yellow)) "
+
+[directory]
+read_only = " "
+truncation_symbol = "~/"
+style = "#00f2ff"
+format = "[$path]($style)"
+
+[git_branch]
+symbol = "  "
+style = "bold #ffe100 inverted"
+format = " on [$symbol$branch($remote_name)]($style)"
+
+[git_status]
+conflicted = "\\[W/CONFLICTS\\] "
+modified = "\\[modified\\] "
+stashed = "\\[stashed 📦\\] "
+
+style = "bold #ffe100 inverted"
+format = "[$conflicted$stashed$deleted$modified]($style)"
+
+["battery"]
+disabled = false
+
+[nodejs]
+version_format = "v${major}.${minor}"
+format = " on [Nde $version](bold green)"
+
+[package]
+style = "bold #fffff"
+version_format = " v${major}.${minor}"
+format = "[$version]($style)"
